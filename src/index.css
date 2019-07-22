@@ -1,19 +1,25 @@
 .square {
-  width: 80px;
-  height: 80px;
-  border: 1px solid black;
+  width: 48px;
+  height: 48px;
+  border: 1px solid transparent;
   color: white;
-  background-color: #EBECD0;
   text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 0px;
+  padding: 0;
 }
 
-.alt-square {
-  width: 80px;
-  height: 80px;
-  border: 1px solid black;
-  color: white;
-  background-color: #779556;
-  text-align: center;
+.square:focus {
+  outline: none;
+}
+
+.light {
+  background-color: #EBECD0;
+}
+
+.dark {
+    background-color: #779556;
 }
 
 .board-row {
