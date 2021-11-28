@@ -1,8 +1,11 @@
 export default class Piece {
-  constructor(player, square, render) {
+  constructor(player, square) {
     this.player = player;
     this.square = square;
-    this.render = render;
+  }
+
+  setSquare(square) {
+    this.square = square;
   }
 
   getPlayer() {
@@ -14,6 +17,10 @@ export default class Piece {
   }
 
   getRender() {
-    return this.render;
+    
+  }
+
+  move() {
+    
   }
 }

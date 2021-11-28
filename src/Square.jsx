@@ -1,12 +1,24 @@
 import React from 'react';
 
-function Square(props) {
+const Square = (props) => {
     const piece = props.piece ? props.piece.getRender() : <React.Fragment/>
     return(
-    <button className = {"square " + props.color}>
+    <div onDrop={e=> handleDrop(e, props.moveCallback, props.index)} onDragOver={handleDragOver}className = {"square " + props.colour}>
       {piece}
-    </button>
+    </div>
   );
+}
+
+const handleDrop = (e, callback, index) => {
+  e.stopPropagation();
+  e.preventDefault();
+  callback(index)
+  console.log("dropped")
+}
+
+const handleDragOver = (e) => {
+  e.stopPropagation();
+  e.preventDefault();
 }
 
 export default Square;
